@@ -1,3 +1,9 @@
+.container {
+    counter-reset: sum 0;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
 .boxes {
     display: flex;
     gap: 15px;
