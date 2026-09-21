@@ -13,7 +13,8 @@
 .box-label input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
+    width: 0;
+    height: 0;
 }
 
 .card {
@@ -34,10 +35,10 @@
     background-color: gold;
 }
 
-#num1:checked + .card { counter-increment: sum 10; }
-#num2:checked + .card { counter-increment: sum 32; }
-#num3:checked + .card { counter-increment: sum 64; }
-#num4:checked + .card { counter-increment: sum -15; }
+#num1:checked { counter-increment: sum 10; }
+#num2:checked { counter-increment: sum 32; }
+#num3:checked { counter-increment: sum 64; }
+#num4:checked { counter-increment: sum -15; }
 
 .result {
     font-size: 32px;
