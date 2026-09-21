@@ -10,13 +10,6 @@
     margin-bottom: 25px;
 }
 
-.box-label input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
 .card {
     width: 110px;
     height: 110px;
@@ -31,14 +24,25 @@
     transition: background-color 0.2s ease;
 }
 
-.box-label input:checked + .card {
+#num1:checked ~ .boxes label[for="num1"] {
     background-color: gold;
+    counter-increment: sum 10;
 }
 
-#num1:checked { counter-increment: sum 10; }
-#num2:checked { counter-increment: sum 32; }
-#num3:checked { counter-increment: sum 64; }
-#num4:checked { counter-increment: sum -15; }
+#num2:checked ~ .boxes label[for="num2"] {
+    background-color: gold;
+    counter-increment: sum 32;
+}
+
+#num3:checked ~ .boxes label[for="num3"] {
+    background-color: gold;
+    counter-increment: sum 64;
+}
+
+#num4:checked ~ .boxes label[for="num4"] {
+    background-color: gold;
+    counter-increment: sum -15;
+}
 
 .result {
     font-size: 32px;
