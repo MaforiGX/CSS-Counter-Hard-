@@ -1,0 +1,43 @@
+.boxes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.box-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.card {
+    width: 110px;
+    height: 110px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.box-label input:checked + .card {
+    background-color: gold;
+}
+
+#num1:checked + .card { counter-increment: sum 10; }
+#num2:checked + .card { counter-increment: sum 32; }
+#num3:checked + .card { counter-increment: sum 64; }
+#num4:checked + .card { counter-increment: sum -15; }
+
+.result {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.result::after {
+    content: counter(sum);
+}
